@@ -13,7 +13,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      font-family: "Comic Sans MS", cursive, sans-serif;
+      font-family: "Comic Sans MS", Verdana, sans-serif;
       padding: 10px;
     }
     .card {
@@ -32,7 +32,7 @@
       overflow-y: auto;
       white-space: normal;
     }
-    
+
     h2.title {
       white-space: nowrap;
     }
@@ -44,7 +44,7 @@
     <div class="row justify-content-center">
       <div class="col-12 col-md-8 col-lg-6">
         <div class="card p-4 text-center">
-          <h2 class="mb-4 title">🌟 Вчимо англійську 🌟</h2>
+          <h2 class="mb-4 title">⭐ Вчимося ⭐</h2>
 
           <!-- Input -->
           <div class="input-group mb-3">
@@ -78,7 +78,7 @@
     function renderList() {
       const list = document.getElementById("wordList");
       if (words.length === 0) {
-        list.textContent = "Список порожній";
+        list.textContent = "Список порожннрй";
       } else {
         list.textContent = words.join(", ");
       }
@@ -96,7 +96,7 @@
 
     function showRandomWord() {
       if (words.length === 0) {
-        document.getElementById("randomWord").textContent = "🎉 Список порожній!";
+        document.getElementById("randomWord").textContent = "Список порожній!";
         return;
       }
       const index = Math.floor(Math.random() * words.length);
