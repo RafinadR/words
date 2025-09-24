@@ -51,7 +51,8 @@
 
           <!-- Список слів -->
           <h4>📋 Список слів:</h4>
-          <ul id="wordList" class="mb-4"></ul>
+          <div id="wordList" class="mb-4 text-wrap border rounded p-2 bg-light" 
+                style="max-height: 120px; overflow-y: auto; white-space: normal;"></div>
 
           <!-- Кнопка випадкове слово -->
           <button class="btn btn-success btn-lg" onclick="showRandomWord()">🎲 Показати випадкове слово</button>
@@ -74,12 +75,11 @@
 
     function renderList() {
       const list = document.getElementById("wordList");
-      list.innerHTML = "";
-      words.forEach(word => {
-        let li = document.createElement("li");
-        li.textContent = word;
-        list.appendChild(li);
-      });
+      if (words.length === 0) {
+        list.textContent = "Список порожній";
+      } else {
+        list.textContent = words.join(", ");
+      }
     }
 
     function addWord() {
