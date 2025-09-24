@@ -23,7 +23,7 @@
     #randomWord {
       font-size: 2rem;
       color: #ff4081;
-      margin-top: 15px;
+      margin: 20px 0;
     }
     #wordList {
       font-size: 1rem;
@@ -31,6 +31,10 @@
       max-height: 150px;
       overflow-y: auto;
       white-space: normal;
+
+    h2.title {
+      white-space: nowrap;
+    }
     }
   </style>
 </head>
@@ -39,23 +43,23 @@
     <div class="row justify-content-center">
       <div class="col-12 col-md-8 col-lg-6">
         <div class="card p-4 text-center">
-          <h2 class="mb-4">🌟 Вчимо англійську 🌟</h2>
+          <h2 class="mb-4 title">🌟 Вчимо англійську 🌟</h2>
 
           <!-- Input -->
           <div class="input-group mb-3">
-            <input type="text" id="wordInput" class="form-control" placeholder="Введи слово українською">
+            <input type="text" id="wordInput" class="form-control" placeholder="Введи слово">
             <button class="btn btn-primary" onclick="addWord()">Додати</button>
           </div>
 
-          <!-- Список слів -->
+          <!-- Word list -->
           <h5>📋 Список слів:</h5>
           <div id="wordList" class="mb-4 text-wrap border rounded p-2 bg-light"></div>
 
-          <!-- Кнопка випадкове слово -->
+          <!-- Random word button -->
           <button class="btn btn-success btn-lg w-100 mb-2" onclick="showRandomWord()">🎲 Показати випадкове слово</button>
           <h2 id="randomWord"></h2>
 
-          <!-- Очистити список -->
+          <!-- Clear list -->
           <button class="btn btn-danger w-100 mt-2" onclick="clearWords()">🗑 Очистити список</button>
         </div>
       </div>
